@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true"
+        android:drawable="@color/darkgrey"
+        android:height="40dp"
+        android:width="8dp"
+        android:bottomRightRadius="3dp" android:bottomLeftRadius="3dp"
+        android:topLeftRadius="3dp" android:topRightRadius="3dp">
+
+    </item>
+
+    <item android:state_pressed="false"
+        android:drawable="@color/darklightgrey"
+        android:height="25dp"
+        android:width="3dp"
+        android:bottomRightRadius="3dp" android:bottomLeftRadius="3dp"
+        android:topLeftRadius="3dp" android:topRightRadius="3dp">
+
+    </item>
+
+</selector>
+
+

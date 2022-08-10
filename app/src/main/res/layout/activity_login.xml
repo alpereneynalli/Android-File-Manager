@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@color/lightgrey">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkgrey"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="File Manager"
+        app:titleMarginStart="20dp"
+        app:titleTextColor="@color/textgrey"
+        app:titleTextAppearance="@style/RobotoLightAppearance" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="Welcome! You need to grant access to your files \n for this app to work."
+        android:textAlignment="center"
+        android:textColor="@color/textgrey"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/permissionBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.86" />
+
+    <Button
+        android:id="@+id/permissionBtn"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:text="Allow Data Access"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/darklightgrey"
+        android:textColor="@color/textgrey"
+        android:textSize="12sp"/>
+
+    <Button
+        android:id="@+id/quitBtn"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:background="@color/darklightgrey"
+        android:text="QUIT"
+        android:textColor="@color/textgrey"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65" />
+</androidx.constraintlayout.widget.ConstraintLayout>

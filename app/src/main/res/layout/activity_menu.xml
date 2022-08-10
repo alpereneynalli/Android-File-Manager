@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkgrey"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="File Manager"
+        app:titleMarginStart="20dp"
+        app:titleTextColor="@color/textgrey"
+        app:titleTextAppearance="@style/RobotoLightAppearance" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightgrey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/darkgrey">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/layoutbg">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:indeterminateOnly="false"
+                android:progressDrawable="@drawable/circle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.19999999"
+                tools:progress="70">
+
+            </ProgressBar>
+
+            <TextView
+                android:id="@+id/circleBarMiddleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%70"
+                android:textColor="@color/textgrey"
+                app:layout_constraintBottom_toBottomOf="@+id/progressBar"
+                app:layout_constraintEnd_toEndOf="@+id/progressBar"
+                app:layout_constraintStart_toStartOf="@+id/progressBar"
+                app:layout_constraintTop_toTopOf="@+id/progressBar">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Space"
+                android:textColor="@color/darktextgrey"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.18"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/progressBar"
+                app:layout_constraintVertical_bias="0.813"
+                android:fontFamily="@font/roboto_light">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textTotalSpace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="64GB"
+                android:textColor="@color/textgrey"
+                android:textSize="16sp"
+                android:fontFamily="@font/roboto_light"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:layout_constraintVertical_bias="0.0">
+
+            </TextView>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/dot"
+                app:layout_constraintBottom_toBottomOf="@+id/textTotalSpace"
+                app:layout_constraintEnd_toStartOf="@+id/textView"
+                app:layout_constraintHorizontal_bias="0.8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textTotalSpace" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Used"
+                android:textColor="@color/darktextgrey"
+                android:textSize="16sp"
+                android:fontFamily="@font/roboto_light"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.82"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/progressBar"
+                app:layout_constraintVertical_bias="0.813">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textUsedSpace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="64GB"
+                android:textColor="@color/textgrey"
+                android:textSize="16sp"
+                android:fontFamily="@font/roboto_light"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textView1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textView1"
+                app:layout_constraintTop_toBottomOf="@+id/textView1"
+                app:layout_constraintVertical_bias="0.0">
+
+            </TextView>
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/dotusedspace"
+                app:layout_constraintBottom_toBottomOf="@+id/textUsedSpace"
+                app:layout_constraintEnd_toStartOf="@+id/textView1"
+                app:layout_constraintHorizontal_bias="0.95"
+                app:layout_constraintStart_toEndOf="@+id/textTotalSpace"
+                app:layout_constraintTop_toTopOf="@+id/textUsedSpace" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/layoutbg1"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:id="@+id/buttonFolders"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:background="@drawable/ripplerounded"
+                android:clickable="true"
+                android:padding="5dp">
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/icons8_folder_100"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY">
+                </ImageView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="FOLDERS"
+                    android:textColor="@color/textgrey"
+                    android:textAlignment="center"
+                    android:textSize="10sp">
+
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/buttonVideos"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:background="@drawable/ripplerounded"
+                android:clickable="true"
+                android:padding="5dp">
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/videos"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY">
+                </ImageView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="VIDEOS"
+                    android:textColor="@color/textgrey"
+                    android:textAlignment="center"
+                    android:textSize="10sp">
+
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/buttonAudios"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:background="@drawable/ripplerounded"
+                android:clickable="true"
+                android:padding="5dp">
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/icons8_audio_96"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY">
+                </ImageView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="AUDIO"
+                    android:textColor="@color/textgrey"
+                    android:textAlignment="center"
+                    android:textSize="10sp">
+
+                </TextView>
+            </LinearLayout>
+
+        </LinearLayout>
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/textgrey"
+            android:layout_marginHorizontal="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/layoutbg2"
+            android:layout_marginHorizontal="20dp"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:id="@+id/buttonPhotos"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:background="@drawable/ripplerounded"
+                android:clickable="true"
+                android:padding="5dp">
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/icons8_photos_60"
+                    android:adjustViewBounds="true"
+                    android:scaleType="center">
+                </ImageView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="PHOTOS"
+                    android:textColor="@color/textgrey"
+                    android:textAlignment="center"
+                    android:textSize="10sp">
+
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/buttonDownloads"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:background="@drawable/ripplerounded"
+                android:clickable="true"
+                android:padding="5dp">
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/icons8_downloads_folder_96"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY">
+                </ImageView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="DOWNLOADS"
+                    android:textColor="@color/textgrey"
+                    android:textAlignment="center"
+                    android:textSize="10sp">
+
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/buttonDocuments"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:background="@drawable/ripplerounded"
+                android:clickable="true"
+                android:padding="5dp">
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/icons8_documents_96"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY">
+                </ImageView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="DOCUMENTS"
+                    android:textColor="@color/textgrey"
+                    android:textAlignment="center"
+                    android:textSize="10sp">
+
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

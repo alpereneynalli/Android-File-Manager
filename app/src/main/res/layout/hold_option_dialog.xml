@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:id="@+id/hold_options"
+    android:background="@drawable/layoutbg1"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/shareLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackgroundBorderless">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:src="@drawable/icons8_share_90"
+            android:padding="6dp">
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="Share"
+            android:textAlignment="center"
+            android:textColor="@color/textgrey">
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/renameLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackgroundBorderless">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:src="@drawable/icons8_rename_96"
+            android:padding="4dp">
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="Rename"
+            android:textAlignment="center"
+            android:textColor="@color/textgrey">
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/deleteLayout"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackgroundBorderless">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:src="@drawable/icons8_delete_64"
+            android:padding="4dp">
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="Delete"
+            android:textAlignment="center"
+            android:textColor="@color/textgrey">
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/detailsLayout"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackgroundBorderless">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:src="@drawable/icons8_info_90"
+            android:padding="4dp">
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="Details"
+            android:textAlignment="center"
+            android:textColor="@color/textgrey">
+        </TextView>
+    </LinearLayout>
+
+</LinearLayout>
